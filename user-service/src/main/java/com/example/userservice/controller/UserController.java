@@ -48,8 +48,8 @@ public class UserController {
         message.setMessageId(UUID.randomUUID().toString());
         message.setMessage(convertJsonUtils.convertObjToString(createUserInfo));
         template.convertAndSend(MQConfig.EXCHANGE, MQConfig.ROUTING_KEY, message);
-        System.out.println("sending " + message + " to Exchange ");
-//        checkResponseMessage();
+//        System.out.println("sending " + message + " to Exchange ");
+        System.out.println("đã bắn message đến Exchange");
         return new CustomResponse(HttpStatus.OK.value(), HttpStatusConstants.SUCCESS_MESSAGE, createUserInfo);
     }
 

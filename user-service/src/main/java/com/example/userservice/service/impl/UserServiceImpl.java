@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
 
         //kafka sending
         String message = convertJsonUtils.convertObjToString(userResponseDTO);
-        System.out.println(message);
+//        System.out.println(message);
         return userResponseDTO;
     }
 
