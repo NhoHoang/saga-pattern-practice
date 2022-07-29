@@ -18,7 +18,7 @@ public class MessageListener {
     }
 
     //    @RabbitListener(queues = MQConfig.QUEUE)
-    @RabbitListener(queues = "message_queue")
+    @RabbitListener(queues = "queue_to_services")
     public void listener(CustomMessage message) {
         System.out.println("Message from user-service: " + message);
         CustomMessage sendingMessage = new CustomMessage();

@@ -49,7 +49,7 @@ public class UserController {
         message.setMessage(convertJsonUtils.convertObjToString(createUserInfo));
         template.convertAndSend(MQConfig.EXCHANGE, MQConfig.ROUTING_KEY, message);
 //        System.out.println("sending " + message + " to Exchange ");
-        System.out.println("đã bắn message đến Exchange");
+        System.out.println("      Sending message to message_exchange_to_services ");
         return new CustomResponse(HttpStatus.OK.value(), HttpStatusConstants.SUCCESS_MESSAGE, createUserInfo);
     }
 
