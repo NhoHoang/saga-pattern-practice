@@ -10,7 +10,7 @@ public class MessageListener {
 //    @RabbitListener(queues = MQConfig.QUEUE)
     @RabbitListener(queues = "message_queue_user")
     public void checkResponseMessage(CustomMessage message) {
-        System.out.println("Tin nhắn nhận được từ các services: " + message);
+        System.out.println("Message from services: " + message);
     }
 
 }
